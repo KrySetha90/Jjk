@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OriginOS Wiggle"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Shake or tilt your phone to make the layers wobble." />
+
+        <!-- Shake sensitivity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Shake sensitivity"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_shake_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50%" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seek_shake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:max="100" />
+
+        <!-- Spring stiffness -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Spring stiffness"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_stiffness_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50%" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seek_stiffness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:max="100" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Low = slow, floaty liquid. High = snappy and tight."
+            android:textSize="12sp" />
+
+        <!-- Background -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Background image"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_bg_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default gradient" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_pick_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Choose image" />
+
+            <Button
+                android:id="@+id/btn_reset_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Use default" />
+        </LinearLayout>
+
+        <!-- Clock style -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clock style"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_clock_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_clean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clean" />
+
+            <RadioButton
+                android:id="@+id/rb_fire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fire" />
+
+            <RadioButton
+                android:id="@+id/rb_glow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Glow" />
+
+            <RadioButton
+                android:id="@+id/rb_cosmic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cosmic" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set as live wallpaper" />
+    </LinearLayout>
+</ScrollView>
