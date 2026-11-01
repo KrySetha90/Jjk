@@ -27,6 +27,12 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+          
+      - name: Validate Android project layout  
+        run: test -f settings.gradle
+             test -d app
+             test -f app/build.gradle
+             echo "Android project layout OK"
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
