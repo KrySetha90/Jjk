@@ -25,7 +25,3 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 }
-
-// Intentionally no dependencies: the wallpaper uses only the platform SDK.
-dependencies {
-}
