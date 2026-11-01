@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:label="OriginOS Wiggle"
+        android:supportsRtl="true">
+
+        <service
+            android:name=".WiggleWallpaperService"
+            android:exported="true"
+            android:label="OriginOS Wiggle"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" />
+        </service>
+
+        <activity
+            android:name=".WallpaperConfigActivity"
+            android:exported="true"
+            android:label="OriginOS Wiggle"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
