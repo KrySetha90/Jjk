@@ -29,7 +29,8 @@ jobs:
           java-version: '17'
           
       - name: Validate Android project layout  
-        run: test -f settings.gradle
+        run: |
+             test -f settings.gradle
              test -d app
              test -f app/build.gradle
              echo "Android project layout OK"
